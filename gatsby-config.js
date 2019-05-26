@@ -8,6 +8,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
+    {
       resolve: 'gatsby-plugin-root-import',
       options: {
         assets: path.join(__dirname, 'src/assets'),
