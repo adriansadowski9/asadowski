@@ -1,4 +1,5 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from 'assets/styles/theme';
 import Hamburger from 'components/Hamburger/Hamburger';
@@ -22,11 +23,15 @@ const Logo = styled.h3`
 `;
 
 
-const Header = () => (
-    <HeaderWrapper>
+const Header = ({ className }) => (
+    <HeaderWrapper className={className}>
         <Logo>as.</Logo>
         <Hamburger/>
     </HeaderWrapper>
 )
+
+Header.propTypes = {
+    className: PropTypes.string.isRequired
+}
 
 export default Header
