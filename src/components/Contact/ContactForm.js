@@ -67,9 +67,9 @@ const StyledButton = styled.button`
 
 const ContactForm = () => (
     <StyledForm>
-        <StyledInput type="text" placeholder="email"/>
-        <StyledInput type="text" placeholder="imię"/>
-        <StyledTextarea placeholder="wiadomość"/>
+        <StyledInput type="text" name="email" placeholder="email"/>
+        <StyledInput type="text" name="name" placeholder="imię"/>
+        <StyledTextarea name="message" placeholder="wiadomość"/>
         <StyledButton type="submit">wyślij</StyledButton>
     </StyledForm>
 )

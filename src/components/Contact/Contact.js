@@ -43,7 +43,7 @@ const ContactText = styled.span`
 `;
 
 const Contact = () => (
-    <SectionWrapper>
+    <SectionWrapper id="contact">
         <Title>Kontakt</Title>
         <DetailsContainer>
             <ContactDetail>

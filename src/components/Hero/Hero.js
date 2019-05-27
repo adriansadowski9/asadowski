@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import styled from 'styled-components';
 import theme from 'assets/styles/theme';
 import Header from 'components/Header/Header';
@@ -55,7 +55,7 @@ const Socials = styled.div`
     position: absolute;
     left: 35px;
     bottom: 55px;
-    svg:first-child {
+    a:first-child {
         margin-bottom: 15px;
     }
 `;
@@ -68,8 +68,12 @@ const Hero = () => (
             <Subtitle>Lorem ipsum.</Subtitle>
         </HeroTitle>
         <Socials>
-            <GithubIcon />
-            <LinkedInIcon />
+            <a href="https://github.com/luvisoniasty" target="_blank" rel="noopener noreferrer">
+                <GithubIcon/>
+            </a>
+            <a href="https://www.linkedin.com/in/adrian-sadowski-6299b7171/" target="_blank" rel="noopener noreferrer">
+                <LinkedInIcon/>
+            </a>
         </Socials>
     </HeroWrapper>
 )

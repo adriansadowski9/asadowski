@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SmoothScroll from 'smooth-scroll';
 import MainTemplate from 'templates/MainTemplate/MainTemplate';
 import Hero from 'components/Hero/Hero';
 import AboutMe from 'components/AboutMe/AboutMe';
@@ -11,16 +12,21 @@ const SectionWrapper = styled.div`
     overflow: hidden;
 `;
 
-const IndexPage = () => (
-  <MainTemplate>
-    <SectionWrapper>
-      <Hero/>
-      <AboutMe/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
-    </SectionWrapper>
-  </MainTemplate>
-)
+const IndexPage = () => {
+  if (typeof window !== "undefined") {
+    SmoothScroll('a[href*="#"]', { speed: 600 });
+  }
+  return (
+    <MainTemplate>
+      <SectionWrapper>
+        <Hero/>
+        <AboutMe/>
+        <Portfolio/>
+        <Contact/>
+        <Footer/>
+      </SectionWrapper>
+    </MainTemplate>
+  );
+}
 
 export default IndexPage
