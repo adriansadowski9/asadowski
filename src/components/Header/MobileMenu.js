@@ -17,6 +17,10 @@ const MenuContainer = styled.div`
     background: ${theme.yellow};
     transform: translateX(${props => props.opened ? '0' : '100%'});
     transition: transform .4s ease-in .1s;
+
+    ${theme.mq.desktop} {
+        display: none;
+    }
 `;
 
 const MenuList = styled.ul`
@@ -46,9 +50,9 @@ const StyledContactLink = styled(StyledLink)`
 
 
 const MobileMenu = (props) => {
-    const { toggleMenu, openedMenu, className } = props;
+    const { toggleMenu, openedMenu } = props;
     return  (
-        <MenuContainer className={className} opened={openedMenu}>
+        <MenuContainer opened={openedMenu}>
             <MenuList>
                 <MenuItem onClick={toggleMenu}><StyledLink to="/#about-me">O mnie</StyledLink></MenuItem>
                 <MenuItem onClick={toggleMenu}><StyledLink to="/#portfolio">Portfolio</StyledLink></MenuItem>
@@ -60,8 +64,7 @@ const MobileMenu = (props) => {
 
 MobileMenu.propTypes = {
     toggleMenu: PropTypes.func.isRequired,
-    openedMenu: PropTypes.bool.isRequired,
-    className: PropTypes.string.isRequired
+    openedMenu: PropTypes.bool.isRequired
 }
 
 export default MobileMenu

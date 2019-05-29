@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import theme from 'assets/styles/theme';
@@ -9,6 +8,14 @@ const MenuContainer = styled.div`
     align-items: center;
     justify-content: flex-end;
     z-index: 999;
+
+    ${theme.mq.mobile} {
+        display: none;
+    }
+
+    ${theme.mq.tablet} {
+        display: none;
+    }
 `;
 
 const MenuList = styled.ul`
@@ -40,10 +47,9 @@ const StyledLink = styled(Link)`
     }
 `;
 
-const MobileMenu = (props) => {
-    const { className } = props;
+const DesktopMenu = () => {
     return  (
-        <MenuContainer className={className}>
+        <MenuContainer>
             <MenuList>
                 <MenuItem><StyledLink to="/#about-me">O mnie</StyledLink></MenuItem>
                 <MenuItem><StyledLink to="/#portfolio">Portfolio</StyledLink></MenuItem>
@@ -53,8 +59,4 @@ const MobileMenu = (props) => {
     )
 }
 
-MobileMenu.propTypes = {
-    className: PropTypes.string.isRequired
-}
-
-export default MobileMenu
+export default DesktopMenu

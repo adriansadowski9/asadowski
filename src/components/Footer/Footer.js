@@ -11,9 +11,12 @@ const FooterWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     ${theme.mq.desktop} {
-        padding: 70px 140px;
+        padding: 70px 50px;
         flex-direction: row;
         justify-content: space-between;
+    }
+    ${theme.mq.large} {
+        padding: 70px 140px;
     }
 `;
 

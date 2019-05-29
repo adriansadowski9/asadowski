@@ -30,8 +30,12 @@ const StyledPortfolioItem = styled.div`
     }
     ${theme.mq.desktop} {
         width: 32%;
-        height: 700px;
+        height: 550px;
         margin-bottom: 0;
+    }
+
+    ${theme.mq.wide} {
+        height: 700px;
     }
     :hover {
         .gatsby-image-wrapper {
@@ -83,6 +87,10 @@ const Description = styled.p`
     margin-top: 0;
     text-align: right;
     font-size: ${theme.font.size.xxxs};
+    ${theme.mq.wide} {
+        font-size: ${theme.font.size.xxs};
+    }
+
 `;
 
 const UsedTechnology = styled.p`
@@ -90,6 +98,10 @@ const UsedTechnology = styled.p`
     text-align: right;
     font-weight: ${theme.font.weight.bold};
     text-transform: uppercase;
+
+    ${theme.mq.wide} {
+        font-size: ${theme.font.size.xxxs};
+    }
 `;
 
 const LinkContainer = styled.div`
@@ -117,7 +129,12 @@ const StyledLink = styled.a`
     }
 
     ${theme.mq.desktop} {
-        padding: 16px 45px;
+        font-size: ${theme.font.size.xxxs};
+    }
+
+    ${theme.mq.large} {
+        padding: 16px 45;
+        font-size: ${theme.font.size.xxs};
     }
 `;
 
@@ -138,7 +155,12 @@ const StyledSpan = styled.span`
         color: ${theme.black}
     }
     ${theme.mq.desktop} {
-        padding: 16px 45px;
+        font-size: ${theme.font.size.xxxs};
+    }
+
+    ${theme.mq.large} {
+        padding: 16px 45;
+        font-size: ${theme.font.size.xxs};
     }
 `;
 
@@ -148,7 +170,6 @@ const PortfolioItem = (props) => {
         width: "100%",
         height: "100%",
         backgroundSize: "cover",
-        filter: "grayscale(0.3)",
         transform: "scale(1.27) rotate(10deg)" 
     }
     const { name, imageName, description, usedTechnology, demoLink, githubLink} = props;
@@ -182,13 +203,14 @@ const PortfolioItem = (props) => {
                                 Demo
                             </StyledLink>
                             : '' }
-                            {githubLink ? 
+                            { githubLink ? 
                             <StyledLink href={githubLink} target="_blank" rel="noopener noreferrer">
                                 Github
                             </StyledLink>
                             : <StyledSpan>
-                                Github (prywatny)
-                            </StyledSpan> }
+                                Github (prywatne)
+                              </StyledSpan>
+                            }
                         </LinkContainer>
                     </PortfolioItemDetails>
                 </StyledPortfolioItem>

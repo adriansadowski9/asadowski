@@ -29,7 +29,7 @@ const HeroWrapper = styled.div`
             position: absolute;
             width: 100vh;
             height: 100vh;
-            left: 65%;
+            left: 70%;
             top: 0;
             transform: rotate(45deg);
             background: url(${props => props.image}) right center;
@@ -37,8 +37,12 @@ const HeroWrapper = styled.div`
         }
         ::after {
             top: 0;
-            left: 65%;
             opacity: 0.8;
+        }
+    }
+    ${theme.mq.large} {
+        ::before, ::after {
+            left: 65%;
         }
     }
 `;
@@ -46,11 +50,21 @@ const HeroWrapper = styled.div`
 const HeroTitle = styled.div`
     margin: 150px 0 0 35px;
 
-    ${theme.mq.desktop} {
-        margin: 0 0 0 140px;
+    ${theme.mq.tablet} {
+        margin: 0 0 0 35px;
         display: flex;
         flex-direction: column;
         align-self: center;
+    }
+    
+    ${theme.mq.desktop} {
+        margin: 0 0 0 50px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    ${theme.mq.large} {
+        margin: 0 0 0 140px;
     }
 `;
 
@@ -60,6 +74,9 @@ const Title = styled.h2`
     font-weight: ${theme.font.weight.bold};
     text-transform: uppercase;
     margin: 0;
+    ${theme.mq.tablet} {
+        font-size: ${theme.font.size.xxl};
+    }
     ${theme.mq.desktop} {
         font-size: ${theme.font.size.xxl};
     }
@@ -70,6 +87,10 @@ const Subtitle = styled.h3`
     font-size: ${theme.font.size.xxs};
     font-weight: ${theme.font.weight.regular};
     margin: 0;
+
+    ${theme.mq.tablet} {
+        font-size: ${theme.font.size.s};
+    }
     ${theme.mq.desktop} {
         font-size: ${theme.font.size.s};
         display: flex;
@@ -95,6 +116,10 @@ const Socials = styled.div`
     }
 
     ${theme.mq.desktop} {
+        left: 50px;
+    }
+
+    ${theme.mq.large} {
         left: 140px;
     }
 `;
@@ -106,7 +131,7 @@ const Hero = () => (
             <HeroWrapper image={data.heroImage.childImageSharp.fluid.src}>
                 <HeroTitle>
                     <Title>Cześć.</Title>
-                    <Subtitle>Lorem ipsum.</Subtitle>
+                    <Subtitle>Jestem Adrian.</Subtitle>
                 </HeroTitle>
                 <Socials>
                     <a href="https://github.com/luvisoniasty" target="_blank" rel="noopener noreferrer">

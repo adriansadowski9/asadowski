@@ -4,7 +4,12 @@ import theme from 'assets/styles/theme';
 
 const SectionWrapper = styled.div`
     padding: 55px 35px;
+    
     ${theme.mq.desktop} {
+        padding: 150px 50px;
+    }
+
+    ${theme.mq.large} {
         padding: 150px 140px;
     }
 `;

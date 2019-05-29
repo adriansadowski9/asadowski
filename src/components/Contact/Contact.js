@@ -9,7 +9,12 @@ import ContactForm from './ContactForm';
 const SectionWrapper = styled.div`
     padding: 55px 35px;
     background: ${theme.yellow};
+
     ${theme.mq.desktop} {
+        padding: 150px 50px;
+    }
+
+    ${theme.mq.large} {
         padding: 150px 140px;
     }
 `;
@@ -49,11 +54,16 @@ const StyledText = styled.span`
 
         ::after {
             content: '';
-            width: 120%;
+            width: 110%;
             height: 5px;
             background: ${theme.white};
             position: absolute;
             bottom: -25px;
+        }
+    }
+    ${theme.mq.large} {
+        ::after {
+            width: 120%;
         }
     }
 `;
@@ -71,6 +81,19 @@ const ContactDetail = styled.div`
     }
 `;
 
+const ContactMail = styled.a`
+    line-height: 24px;
+    font-size: ${theme.font.size.xxxs};
+    text-decoration: none;
+    color: ${theme.black};
+    position: absolute;
+    left: 50px;
+    
+    ${theme.mq.desktop} {
+        font-size: ${theme.font.size.s};
+    }
+`;
+
 const ContactText = styled.span`
     line-height: 24px;
     font-size: ${theme.font.size.xxxs};
@@ -82,6 +105,7 @@ const ContactText = styled.span`
     }
 `;
 
+
 const Contact = () => (
     <SectionWrapper id="contact">
         <Title>Kontakt</Title>
@@ -90,9 +114,9 @@ const Contact = () => (
                 <StyledText>Porozmawiajmy</StyledText>
                 <ContactDetail>
                     <MailIcon/> 
-                    <ContactText>
+                    <ContactMail href="mailto:kontakt@asadowski.me">
                         kontakt@asadowski.me
-                    </ContactText>
+                    </ContactMail>
                 </ContactDetail>
                 <ContactDetail>
                     <PhoneIcon/>

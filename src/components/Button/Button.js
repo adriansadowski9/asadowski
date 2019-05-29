@@ -37,13 +37,17 @@ const StyledButton = styled.button`
     }
 
     ${theme.mq.desktop} {
-        padding: 30px 155px;
+        padding: 20px 75px;
         font-size: ${theme.font.size.s};
 
         ::after {
             top: 16px;
             left: 16px;
         }
+    }
+
+    ${theme.mq.large} {
+        padding: 30px 125px;
     }
 `;
 

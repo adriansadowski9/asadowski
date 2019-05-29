@@ -16,6 +16,10 @@ const HeaderWrapper = styled.div`
     z-index: 100;
 
     ${theme.mq.desktop} {
+        padding: 25px 50px;
+    }
+
+    ${theme.mq.large} {
         padding: 25px 140px;
     }
 `;
@@ -37,27 +41,6 @@ const Logo = styled.h3`
     }
 `;
 
-const StyledHamburger = styled(Hamburger)`
-    ${theme.mq.desktop} {
-        display: none;
-    }
-`;
-
-const StyledMobileMenu = styled(MobileMenu)`
-    ${theme.mq.desktop} {
-        display: none;
-    }
-`;
-
-const StyledDesktopMenu = styled(DesktopMenu)`
-    ${theme.mq.mobile} {
-        display: none;
-    }
-    ${theme.mq.tablet} {
-        display: none;
-    }
-`;
-
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -73,9 +56,9 @@ class Header extends React.Component {
         return(
             <HeaderWrapper openedMenu={mobileMenu}>
                 <Logo openedMenu={mobileMenu}>as.</Logo>
-                <StyledHamburger toggleMenu={this.toggleMobileMenu} openedMenu={mobileMenu}/>
-                <StyledMobileMenu toggleMenu={this.toggleMobileMenu} openedMenu={mobileMenu}/>
-                <StyledDesktopMenu/>
+                <Hamburger toggleMenu={this.toggleMobileMenu} openedMenu={mobileMenu}/>
+                <MobileMenu toggleMenu={this.toggleMobileMenu} openedMenu={mobileMenu}/>
+                <DesktopMenu/>
             </HeaderWrapper>
         )
     }

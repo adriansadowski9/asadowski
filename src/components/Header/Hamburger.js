@@ -11,6 +11,10 @@ const HamburgerContainer = styled.div`
     padding: 5px;
     cursor: pointer;
     z-index: 1000;
+
+    ${theme.mq.desktop} {
+        display: none;
+    }
 `;
 const HamburgerIcon = styled.div`
     align-self: center;
@@ -50,9 +54,9 @@ const HamburgerIcon = styled.div`
 `;
 
 const Hamburger = (props) => {
-    const { toggleMenu, openedMenu, className } = props;
+    const { toggleMenu, openedMenu } = props;
     return  (
-        <HamburgerContainer className={className} onClick={toggleMenu}>
+        <HamburgerContainer  onClick={toggleMenu}>
             <HamburgerIcon opened={openedMenu}/>
         </HamburgerContainer>
     )
@@ -60,8 +64,7 @@ const Hamburger = (props) => {
 
 Hamburger.propTypes = {
     toggleMenu: PropTypes.func.isRequired,
-    openedMenu: PropTypes.bool.isRequired,
-    className: PropTypes.string.isRequired
+    openedMenu: PropTypes.bool.isRequired
 }
 
 export default Hamburger

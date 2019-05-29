@@ -8,6 +8,10 @@ const SectionWrapper = styled.div`
     background: ${theme.black};
 
     ${theme.mq.desktop} {
+        padding: 150px 50px;
+    }
+
+    ${theme.mq.large} {
         padding: 150px 140px;
     }
 `;
