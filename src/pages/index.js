@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import SmoothScroll from 'smooth-scroll';
 import MainTemplate from 'templates/MainTemplate/MainTemplate';
 import Header from 'components/Header/Header';
 import Hero from 'components/Hero/Hero';
@@ -16,7 +15,7 @@ const SectionWrapper = styled.div`
 const IndexPage = () => {
   if (typeof window !== "undefined") {
     // eslint-disable-next-line global-require
-    SmoothScroll('a[href*="#"]', { speed: 600 });
+    require("smooth-scroll")('a[href*="#"]', { speed: 600 })
   }
   return (
     <MainTemplate>
