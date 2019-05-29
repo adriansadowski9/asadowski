@@ -46,9 +46,9 @@ const StyledContactLink = styled(StyledLink)`
 
 
 const MobileMenu = (props) => {
-    const { toggleMenu, openedMenu } = props;
+    const { toggleMenu, openedMenu, className } = props;
     return  (
-        <MenuContainer opened={openedMenu}>
+        <MenuContainer className={className} opened={openedMenu}>
             <MenuList>
                 <MenuItem onClick={toggleMenu}><StyledLink to="/#about-me">O mnie</StyledLink></MenuItem>
                 <MenuItem onClick={toggleMenu}><StyledLink to="/#portfolio">Portfolio</StyledLink></MenuItem>
@@ -60,7 +60,8 @@ const MobileMenu = (props) => {
 
 MobileMenu.propTypes = {
     toggleMenu: PropTypes.func.isRequired,
-    openedMenu: PropTypes.bool.isRequired
+    openedMenu: PropTypes.bool.isRequired,
+    className: PropTypes.string.isRequired
 }
 
 export default MobileMenu

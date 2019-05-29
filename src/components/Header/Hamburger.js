@@ -50,9 +50,9 @@ const HamburgerIcon = styled.div`
 `;
 
 const Hamburger = (props) => {
-    const { toggleMenu, openedMenu } = props;
+    const { toggleMenu, openedMenu, className } = props;
     return  (
-        <HamburgerContainer onClick={toggleMenu}>
+        <HamburgerContainer className={className} onClick={toggleMenu}>
             <HamburgerIcon opened={openedMenu}/>
         </HamburgerContainer>
     )
@@ -60,7 +60,8 @@ const Hamburger = (props) => {
 
 Hamburger.propTypes = {
     toggleMenu: PropTypes.func.isRequired,
-    openedMenu: PropTypes.bool.isRequired
+    openedMenu: PropTypes.bool.isRequired,
+    className: PropTypes.string.isRequired
 }
 
 export default Hamburger

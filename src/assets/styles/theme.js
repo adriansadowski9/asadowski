@@ -22,5 +22,10 @@ const theme = {
         bold: '700',
       },
     },
+    mq: {
+      mobile: '@media only screen and (max-width: 768px)',
+      tablet: '@media only screen and (max-width: 992px)',
+      desktop: '@media only screen and (min-width: 992px)'
+    }
   };
 export default theme;

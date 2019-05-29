@@ -1,12 +1,17 @@
 import React from "react"
 import styled from 'styled-components';
 import theme from 'assets/styles/theme';
+import Button from 'components/Button/Button';
 
 const StyledForm = styled.form`
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    ${theme.mq.desktop} {
+        margin-top: 0;
+        width: 50%;
+    }
 `;
 const StyledInput = styled.input`
     width: 100%;
@@ -24,6 +29,14 @@ const StyledInput = styled.input`
         color: ${theme.black};
         text-align: right;
     }
+
+    ${theme.mq.desktop} {
+        height: 80px;
+        line-height: 80px;
+        margin-bottom: 30px;
+        padding: 20px 50px;
+        font-size: ${theme.font.size.s};
+    }
 `;
 
 const StyledTextarea = styled.textarea`
@@ -40,29 +53,20 @@ const StyledTextarea = styled.textarea`
         color: ${theme.black};
         text-align: right;
     }
+
+    ${theme.mq.desktop} {
+        height: 200px;
+        padding: 20px 50px;
+        font-size: ${theme.font.size.s};
+    }
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled(Button)`
     margin: 20px 0 7px 0;
-    padding: 7px 50px;
-    border: none;
-    background: ${theme.white};
-    color: ${theme.black};
-    font-size: ${theme.font.size.xxxs};
-    font-weight: ${theme.font.weight.bold};
-    position: relative;
-    transform-style: preserve-3d;
-    ::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 7px;
-        left: 7px;
-        transform: translateZ(-1px);
-        background: ${theme.black};
-    }
 
+    ${theme.mq.desktop} {
+        margin: 30px 0 16px 0;
+    }
 `;
 
 const ContactForm = () => (

@@ -9,6 +9,9 @@ import ContactForm from './ContactForm';
 const SectionWrapper = styled.div`
     padding: 55px 35px;
     background: ${theme.yellow};
+    ${theme.mq.desktop} {
+        padding: 150px 140px;
+    }
 `;
 
 const Title = styled.h3`
@@ -20,10 +23,39 @@ const Title = styled.h3`
     width: 255px;
 `;
 
-const DetailsContainer = styled.div`
-    margin-top: 55px;
+const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
+    margin-top: 55px;
+    ${theme.mq.desktop} {
+        margin-top: 70px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+`;
+
+const DetailsContainer = styled.div`
+    flex-direction: column;
+`;
+
+const StyledText = styled.span`
+    display: none;
+    ${theme.mq.desktop} {
+        display: flex;
+        font-size: ${theme.font.size.l};
+        font-weight: ${theme.font.weight.bold};
+        position: relative;
+        margin-bottom: 80px;
+
+        ::after {
+            content: '';
+            width: 120%;
+            height: 5px;
+            background: ${theme.white};
+            position: absolute;
+            bottom: -25px;
+        }
+    }
 `;
 
 const ContactDetail = styled.div`
@@ -33,6 +65,10 @@ const ContactDetail = styled.div`
     :first-of-type {
         margin-top: 0;
     }
+
+    ${theme.mq.desktop} {
+        margin-top: 60px;
+    }
 `;
 
 const ContactText = styled.span`
@@ -40,32 +76,39 @@ const ContactText = styled.span`
     font-size: ${theme.font.size.xxxs};
     position: absolute;
     left: 50px;
+    
+    ${theme.mq.desktop} {
+        font-size: ${theme.font.size.s};
+    }
 `;
 
 const Contact = () => (
     <SectionWrapper id="contact">
         <Title>Kontakt</Title>
-        <DetailsContainer>
-            <ContactDetail>
-                <MailIcon/> 
-                <ContactText>
-                    kontakt@asadowski.me
-                </ContactText>
-            </ContactDetail>
-            <ContactDetail>
-                <PhoneIcon/>
-                <ContactText>
-                    +48 888 834 480
-                </ContactText>
-            </ContactDetail>
-            <ContactDetail>
-                <LocationIcon/>
-                <ContactText>
-                    Gdańsk, Polska
-                </ContactText>
-            </ContactDetail>
-        </DetailsContainer>
-        <ContactForm/>
+        <ContactContainer>
+            <DetailsContainer>
+                <StyledText>Porozmawiajmy</StyledText>
+                <ContactDetail>
+                    <MailIcon/> 
+                    <ContactText>
+                        kontakt@asadowski.me
+                    </ContactText>
+                </ContactDetail>
+                <ContactDetail>
+                    <PhoneIcon/>
+                    <ContactText>
+                        +48 888 834 480
+                    </ContactText>
+                </ContactDetail>
+                <ContactDetail>
+                    <LocationIcon/>
+                    <ContactText>
+                        Gdańsk, Polska
+                    </ContactText>
+                </ContactDetail>
+            </DetailsContainer>
+            <ContactForm/>
+        </ContactContainer>
     </SectionWrapper>
 )
 

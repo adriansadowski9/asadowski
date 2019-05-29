@@ -1,16 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from 'assets/styles/theme';
-import Hamburger from 'components/Hamburger/Hamburger';
+import Hamburger from './Hamburger';
 import MobileMenu from './MobileMenu';
+import DesktopMenu from './DesktopMenu';
 
 const HeaderWrapper = styled.div`
     padding: 25px 35px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: ${props => props.openedMenu ? 'fixed' : 'absolute'};
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    ${theme.mq.desktop} {
+        padding: 25px 140px;
+    }
 `;
 
 const Logo = styled.h3`
@@ -24,7 +31,33 @@ const Logo = styled.h3`
     z-index: 1000;
     transition: ${props => props.openedMenu ? 
                 'background .1s ease-in .4s, color .1s ease-in .4s' : 'background .4s ease-in .1s, color .4s ease-in .1s'};
+    ${theme.mq.desktop} {
+        font-size: ${theme.font.size.l};
+        padding: 0 20px;
+    }
 `;
+
+const StyledHamburger = styled(Hamburger)`
+    ${theme.mq.desktop} {
+        display: none;
+    }
+`;
+
+const StyledMobileMenu = styled(MobileMenu)`
+    ${theme.mq.desktop} {
+        display: none;
+    }
+`;
+
+const StyledDesktopMenu = styled(DesktopMenu)`
+    ${theme.mq.mobile} {
+        display: none;
+    }
+    ${theme.mq.tablet} {
+        display: none;
+    }
+`;
+
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -36,20 +69,16 @@ class Header extends React.Component {
         this.setState(prevState => ({mobileMenu: !prevState.mobileMenu}));
     }
     render() {
-        const { className } = this.props;
         const { mobileMenu } = this.state;
         return(
-            <HeaderWrapper className={className}>
+            <HeaderWrapper openedMenu={mobileMenu}>
                 <Logo openedMenu={mobileMenu}>as.</Logo>
-                <Hamburger toggleMenu={this.toggleMobileMenu} openedMenu={mobileMenu}/>
-                <MobileMenu toggleMenu={this.toggleMobileMenu} openedMenu={mobileMenu}/>
+                <StyledHamburger toggleMenu={this.toggleMobileMenu} openedMenu={mobileMenu}/>
+                <StyledMobileMenu toggleMenu={this.toggleMobileMenu} openedMenu={mobileMenu}/>
+                <StyledDesktopMenu/>
             </HeaderWrapper>
         )
     }
-}
-
-Header.propTypes = {
-    className: PropTypes.string.isRequired
 }
 
 export default Header

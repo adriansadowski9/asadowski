@@ -4,6 +4,9 @@ import theme from 'assets/styles/theme';
 
 const SectionWrapper = styled.div`
     padding: 55px 35px;
+    ${theme.mq.desktop} {
+        padding: 150px 140px;
+    }
 `;
 
 const Title = styled.h3`
@@ -18,6 +21,10 @@ const Title = styled.h3`
 const Content = styled.p`
     margin: 55px 0 0 0;
     font-size: ${theme.font.size.xxxs};
+    ${theme.mq.desktop} {
+        margin-top: 70px;
+        font-size: ${theme.font.size.s};
+    }
 `;
 
 const AboutMe = () => (

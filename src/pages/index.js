@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SmoothScroll from 'smooth-scroll';
 import MainTemplate from 'templates/MainTemplate/MainTemplate';
+import Header from 'components/Header/Header';
 import Hero from 'components/Hero/Hero';
 import AboutMe from 'components/AboutMe/AboutMe';
 import Portfolio from 'components/Portfolio/Portfolio';
@@ -19,6 +20,7 @@ const IndexPage = () => {
   return (
     <MainTemplate>
       <SectionWrapper>
+        <Header/>
         <Hero/>
         <AboutMe/>
         <Portfolio/>
