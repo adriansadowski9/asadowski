@@ -13,22 +13,26 @@ const SectionWrapper = styled.div`
     overflow: hidden;
 `;
 
-const IndexPage = () => {
-  if (typeof window !== "undefined") {
-    SmoothScroll('a[href*="#"]', { speed: 600 });
+class IndexPage extends React.Component {
+  componentWillMount() {
+    if (typeof window !== "undefined") {
+      SmoothScroll('a[href*="#"]', { speed: 600 });
+    }
   }
-  return (
-    <MainTemplate>
-      <SectionWrapper>
-        <Header/>
-        <Hero/>
-        <AboutMe/>
-        <Portfolio/>
-        <Contact/>
-        <Footer/>
-      </SectionWrapper>
-    </MainTemplate>
-  );
-}
+  render() {
+    return (
+      <MainTemplate>
+        <SectionWrapper>
+          <Header/>
+          <Hero/>
+          <AboutMe/>
+          <Portfolio/>
+          <Contact/>
+          <Footer/>
+        </SectionWrapper>
+      </MainTemplate>
+    )
+  }
+};
 
 export default IndexPage
