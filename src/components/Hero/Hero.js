@@ -7,16 +7,16 @@ import LinkedInIcon from 'assets/images/LinkedIn.svg';
 
 const HeroWrapper = styled.div`
     background: ${theme.black};
-    height: 100vh;
-    max-height: 100vh;
+    height: calc(100vh - var(--vh-offset, 0px));
+    max-height: calc(100vh - var(--vh-offset, 0px));
     width: 100vw;
     display: flex;
     position: relative;
     ::after {
         content: '';
         position: absolute;
-        width: 100vh;
-        height: 100vh;
+        width: calc(100vh - var(--vh-offset, 0px));
+        height: calc(100vh - var(--vh-offset, 0px));
         left: 70%;
         top: 28%;
         transform: rotate(45deg);
@@ -27,8 +27,8 @@ const HeroWrapper = styled.div`
         ::before {
             content: '';
             position: absolute;
-            width: 100vh;
-            height: 100vh;
+            width: calc(100vh - var(--vh-offset, 0px));
+            height: calc(100vh - var(--vh-offset, 0px));
             left: 70%;
             top: 0;
             transform: rotate(45deg);

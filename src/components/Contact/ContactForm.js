@@ -70,7 +70,7 @@ const StyledButton = styled(Button)`
 `;
 
 const ContactForm = () => (
-    <StyledForm>
+    <StyledForm name="contact" netlify>
         <StyledInput type="text" name="email" placeholder="email"/>
         <StyledInput type="text" name="name" placeholder="imię"/>
         <StyledTextarea name="message" placeholder="wiadomość"/>
