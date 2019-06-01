@@ -70,10 +70,11 @@ const StyledButton = styled(Button)`
 `;
 
 const ContactForm = () => (
-    <StyledForm name="contact" method="POST" data-netlify="true" data-netlify-honeypost="bot-field">
-        <StyledInput type="email" name="email" placeholder="email"/>
-        <StyledInput type="text" name="name" placeholder="imię"/>
-        <StyledTextarea name="message" placeholder="wiadomość"/>
+    <StyledForm method="POST" data-netlify="true" name="contact">
+        <input type="hidden" name="form-name" value="contact" />
+        <StyledInput type="email" name="email" placeholder="email" required/>
+        <StyledInput type="text" name="name" placeholder="imię" required/>
+        <StyledTextarea name="message" placeholder="wiadomość" required/>
         <StyledButton type="submit">wyślij</StyledButton>
     </StyledForm>
 )
