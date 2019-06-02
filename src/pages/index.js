@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import vhCheck from 'vh-check';
 import MainTemplate from 'templates/MainTemplate/MainTemplate';
 import Header from 'components/Header/Header';
 import Hero from 'components/Hero/Hero';
@@ -14,12 +13,6 @@ const SectionWrapper = styled.div`
 `;
 
 const IndexPage = () => {
-  if (typeof window !== "undefined") {
-    // eslint-disable-next-line global-require
-    require("smooth-scroll")('a[href*="#"]', { speed: 600 })
-    // eslint-disable-next-line
-    const test = vhCheck();
-  }
   return (
     <MainTemplate>
       <SectionWrapper>
