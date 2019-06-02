@@ -4,6 +4,7 @@ const theme = {
     yellow: 'hsl(46, 100%, 48%)',
     font: {
       size: {
+        xxxxs: '1.4rem',
         xxxs: '1.8rem',
         xxs: '2rem',
         xs: '2.5rem',

@@ -130,8 +130,8 @@ const Hero = () => (
         render={data => (
             <HeroWrapper image={data.heroImage.childImageSharp.fluid.src}>
                 <HeroTitle>
-                    <Title>Cześć.</Title>
-                    <Subtitle>Jestem Adrian.</Subtitle>
+                    <Title>Cześć,</Title>
+                    <Subtitle>jestem Adrian.</Subtitle>
                 </HeroTitle>
                 <Socials>
                     <a href="https://github.com/luvisoniasty" target="_blank" rel="noopener noreferrer">

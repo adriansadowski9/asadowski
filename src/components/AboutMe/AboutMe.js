@@ -23,7 +23,7 @@ const Title = styled.h3`
     width: 230px;
 `;
 
-const Content = styled.p`
+const Content = styled.div`
     margin: 55px 0 0 0;
     font-size: ${theme.font.size.xxxs};
     ${theme.mq.desktop} {
@@ -32,10 +32,32 @@ const Content = styled.p`
     }
 `;
 
+const Paragraph = styled.p`
+    margin-top: 0;
+    font-size: ${theme.font.size.xxxs};
+    ${theme.mq.desktop} {
+        font-size: ${theme.font.size.s};
+    }
+    :nth-of-type(2) {
+        margin-bottom: 0px;
+    }
+    :last-of-type {
+        font-weight: ${theme.font.weight.bold};
+        font-size: ${theme.font.size.xxxxs};
+        ${theme.mq.desktop} {
+        font-size: ${theme.font.size.xxs};
+        }
+    }
+`;
+
 const AboutMe = () => (
     <SectionWrapper id="about-me">
         <Title>O mnie</Title>
-        <Content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem diam, ultrices at lacus in, interdum gravida elit. Integer viverra mi suscipit, fringilla quam sed, porttitor magna. Vestibulum pellentesque nulla eget ornare sollicitudin. Vivamus lacinia nisi ac odio iaculis consequat. Vivamus rutrum arcu orci, quis mollis augue condimentum vel. In faucibus accumsan felis, sit amet tincidunt dolor bibendum non. Duis bibendum lorem justo, vitae cursus lectus facilisis vel. In lectus metus, placerat vitae consequat ac, ultrices et leo. Morbi nunc risus, viverra pellentesque nibh eu, mattis maximus sem. Vestibulum dictum varius nisl non egestas. Curabitur euismod ipsum a malesuada sodales. Duis eget commodo neque. Phasellus vel odio nec neque consequat sagittis. Donec elit sem, malesuada eu auctor at, euismod vel nunc. Suspendisse et justo neque. Ut laoreet nunc ac purus placerat, id euismod justo imperdiet.</Content>
+        <Content>
+            <Paragraph>Nazywam się Adrian Sadowski, jestem 23 letnim Junior Front-end Developerem mieszkającym w Gdańsku. Studiuję informatykę na Uniwersytecie Gdańskim, a od dyplomu dzieli mnie jedynie egzamin licencjacki. W swojej pracy staram się dbać o szczegóły, aby być jak najbardziej zadowolonym z efektów końcowych. Moje przykładowe prace można zobaczyć w sekcji poniżej. Jestem nastawiony na dalszy rozwój, aby móc tworzyć coraz bardziej dopracowane i zaawansowane aplikacje. Lubię rozwiązywać problemy i stawiać przed sobą różne wyzwania. Interesuję się również mechaniką samochodową, podróżami, sportami walki oraz piłką nożną.</Paragraph>
+            <Paragraph>Aktualnie korzystam między innymi z takich technologii jak:</Paragraph>
+            <Paragraph>React, Redux, Styled-components, HTML, Javascript, CSS, SCSS, Node.js, Express, MongoDB</Paragraph>
+        </Content>
     </SectionWrapper>
 )
 
