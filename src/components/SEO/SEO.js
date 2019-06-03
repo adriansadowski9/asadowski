@@ -8,7 +8,7 @@ const SEO = () => (
     <html lang="pl" amp />
     <meta 
       name="description" 
-      content="Nazywam się Adrian Sadowski, jestem 23 letnim Junior Front-end Developerem mieszkającym w Gdańsku. Zainteresowanych zapraszam do kontaktu w celu współpracy." 
+      content="Nazywam się Adrian Sadowski, jestem 23 letnim Junior Front-end Developerem mieszkającym w Gdańsku. Zainteresowanych współpracą zapraszam do kontaktu." 
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" />
   </Helmet>
