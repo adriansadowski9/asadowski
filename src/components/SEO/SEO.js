@@ -6,7 +6,10 @@ const SEO = () => (
     defaultTitle="Adrian Sadowski - Front-end Developer"
   >
     <html lang="pl" amp />
-    <meta name="description" content="Adrian Sadowski - Front-end Developer" />
+    <meta 
+      name="description" 
+      content="Nazywam się Adrian Sadowski, jestem 23 letnim Junior Front-end Developerem mieszkającym w Gdańsku. Zainteresowanych zapraszam do kontaktu w celu współpracy." 
+    />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" />
   </Helmet>
 );

@@ -51,11 +51,22 @@ const Paragraph = styled.p`
     }
 `;
 
+const InvisibleHeading = styled.h1`
+    display: inline;
+    margin: 0;
+    font-size: ${theme.font.size.xxxs};
+    font-weight: ${theme.font.weight.regular};
+
+    ${theme.mq.desktop} {
+        font-size: ${theme.font.size.s};
+    }
+`;
+
 const AboutMe = () => (
     <SectionWrapper id="about-me">
         <Title>O mnie</Title>
         <Content>
-            <Paragraph>Nazywam się Adrian Sadowski, jestem 23 letnim Junior Front-end Developerem mieszkającym w Gdańsku. Studiuję informatykę na Uniwersytecie Gdańskim, a od dyplomu dzieli mnie jedynie egzamin licencjacki. W swojej pracy staram się dbać o szczegóły, aby być jak najbardziej zadowolonym z efektów końcowych. Moje przykładowe prace można zobaczyć w sekcji poniżej. Jestem nastawiony na dalszy rozwój, aby móc tworzyć coraz bardziej dopracowane i zaawansowane aplikacje. Lubię rozwiązywać problemy i stawiać przed sobą różne wyzwania. Interesuję się również mechaniką samochodową, podróżami, sportami walki oraz piłką nożną.</Paragraph>
+            <Paragraph>Nazywam się Adrian Sadowski, jestem 23 letnim <InvisibleHeading>Junior Front-end Developer</InvisibleHeading>em mieszkającym w Gdańsku. Studiuję informatykę na Uniwersytecie Gdańskim, a od dyplomu dzieli mnie jedynie egzamin licencjacki. W swojej pracy staram się dbać o szczegóły, aby być jak najbardziej zadowolonym z efektów końcowych. Moje przykładowe prace można zobaczyć w sekcji poniżej. Jestem nastawiony na dalszy rozwój, aby móc tworzyć coraz bardziej dopracowane i zaawansowane aplikacje. Lubię rozwiązywać problemy i stawiać przed sobą różne wyzwania. Interesuję się również mechaniką samochodową, podróżami, sportami walki oraz piłką nożną.</Paragraph>
             <Paragraph>Aktualnie korzystam między innymi z takich technologii jak:</Paragraph>
             <Paragraph>React, Redux, Styled-components, HTML, Javascript, CSS, SCSS, Node.js, Express, MongoDB</Paragraph>
         </Content>
