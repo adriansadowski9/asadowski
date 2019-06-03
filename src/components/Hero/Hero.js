@@ -23,6 +23,12 @@ const HeroWrapper = styled.div`
         background: ${theme.yellow};
     }
 
+    ${theme.mq.tablet} {
+        ::after {
+            top: 20%;
+        }
+    }
+
     ${theme.mq.desktop} {
         ::before {
             content: '';
@@ -87,14 +93,13 @@ const Subtitle = styled.h3`
     font-size: ${theme.font.size.xxs};
     font-weight: ${theme.font.weight.regular};
     margin: 0;
+    text-align: right;
 
     ${theme.mq.tablet} {
         font-size: ${theme.font.size.s};
     }
     ${theme.mq.desktop} {
         font-size: ${theme.font.size.s};
-        display: flex;
-        justify-content: flex-end;
     }
 `;
 

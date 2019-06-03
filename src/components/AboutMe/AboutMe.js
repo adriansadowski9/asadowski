@@ -33,6 +33,7 @@ const Content = styled.div`
 `;
 
 const Paragraph = styled.p`
+    text-align: justify;
     margin-top: 0;
     font-size: ${theme.font.size.xxxs};
     ${theme.mq.desktop} {
