@@ -8,6 +8,12 @@ module.exports = {
     siteUrl: `https://asadowski.me`
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true
+      }
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
