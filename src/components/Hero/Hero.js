@@ -74,7 +74,7 @@ const HeroTitle = styled.div`
     }
 `;
 
-const Title = styled.h2`
+const Title = styled.h4`
     color: ${theme.white};
     font-size: ${theme.font.size.xl};
     font-weight: ${theme.font.weight.bold};
@@ -88,7 +88,7 @@ const Title = styled.h2`
     }
 `;
 
-const Subtitle = styled.h3`
+const Subtitle = styled.h5`
     color: ${theme.white};
     font-size: ${theme.font.size.xxs};
     font-weight: ${theme.font.weight.regular};

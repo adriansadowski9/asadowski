@@ -2,11 +2,14 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `asadowski.me`,
-    description: `Mój mały świat.`,
+    title: `Adrian Sadowski - Front-end Developer`,
+    description: `Adrian Sadowski - Front-end Developer`,
     author: `@asadowski`,
+    siteUrl: `https://asadowski.me`
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-favicon`,
       options: {

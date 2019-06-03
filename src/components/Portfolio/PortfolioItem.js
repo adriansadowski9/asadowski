@@ -133,7 +133,6 @@ const StyledLink = styled.a`
     }
 
     ${theme.mq.large} {
-        padding: 16px 45;
         font-size: ${theme.font.size.xxs};
     }
 `;
@@ -159,7 +158,6 @@ const StyledSpan = styled.span`
     }
 
     ${theme.mq.large} {
-        padding: 16px 45;
         font-size: ${theme.font.size.xxs};
     }
 `;
@@ -186,6 +184,7 @@ const PortfolioItem = (props) => {
                     <BackgroundImage
                         fluid={image.node.childImageSharp.fluid}
                         style={imageStyle}
+                        alt={ name }
                     />
                     <PortfolioItemDetails className="item-details">
                         <ItemName>{name}</ItemName>

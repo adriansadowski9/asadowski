@@ -3,21 +3,12 @@ import Helmet from 'react-helmet';
 
 const SEO = () => (
   <Helmet
-    title="Adrian Sadowski - Front-end Developer"
-    meta={[
-      {
-        name: 'description',
-        content: 'Adrian Sadowski - Front-end Developer',
-      },
-      {
-        name: 'keywords',
-        content: 'frontend, developer',
-      },
-    ]}
-    link={[
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700' }
-    ]}
-  />
+    defaultTitle="Adrian Sadowski - Front-end Developer"
+  >
+    <html lang="pl" amp />
+    <meta name="description" content="Adrian Sadowski - Front-end Developer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" />
+  </Helmet>
 );
 
 export default SEO;

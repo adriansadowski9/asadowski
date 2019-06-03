@@ -20,7 +20,7 @@ const FooterWrapper = styled.div`
     }
 `;
 
-const Logo = styled.h3`
+const Logo = styled.span`
     background: ${theme.yellow};
     font-size: ${theme.font.size.xl};
     color: ${theme.black};

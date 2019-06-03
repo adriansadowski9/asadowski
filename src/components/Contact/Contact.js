@@ -19,7 +19,7 @@ const SectionWrapper = styled.div`
     }
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
     color: ${theme.black};
     font-size: ${theme.font.size.xl};
     font-weight: ${theme.font.weight.bold};
