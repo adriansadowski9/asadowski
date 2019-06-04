@@ -142,7 +142,7 @@ const Hero = () => (
                     <a href="https://github.com/luvisoniasty" target="_blank" rel="noopener noreferrer">
                         <GithubIcon/>
                     </a>
-                    <a href="https://www.linkedin.com/in/adrian-sadowski-6299b7171/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/adriansadowski/" target="_blank" rel="noopener noreferrer">
                         <LinkedInIcon/>
                     </a>
                 </Socials>
